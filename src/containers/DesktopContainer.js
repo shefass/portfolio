@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import {
-  Button,
   Container,
   Menu,
   Responsive,
@@ -11,21 +10,22 @@ import {
 import { HomepageHeading } from "../components/Heading";
 import getWidth from "../constants/getWidth";
 
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
+
+
 export default class DesktopContainer extends Component {
   state = {};
 
   hideFixedMenu = () => this.setState({ fixed: false });
   showFixedMenu = () => this.setState({ fixed: true });
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
     const { children } = this.props;
     const { fixed } = this.state;
+    const { activeItem } = this.state;
 
     return (
+      
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
         <Visibility
           once={false}
@@ -35,44 +35,34 @@ export default class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 700, padding: "1em 0em" }}
+            style={{ minHeight: 700, padding: "1em 1em", backgroundColor: '#207c8c' }}
             vertical
-          >
+            
+                      >
             <Menu
               fixed={fixed ? "top" : null}
               inverted={!fixed}
               pointing={!fixed}
               secondary={!fixed}
-              size="large"
+              size="huge"
+              widths={4}
+              
             >
-              <Container>
-                <Menu.Item as="a" active>
-                  Home
-                </Menu.Item>
-                <Menu.Item as="a">Work</Menu.Item>
-                <Menu.Item as="a">Company</Menu.Item>
-                <Menu.Item as="a">Careers</Menu.Item>
-                <Menu.Item position="right">
-                  <Button as="a" inverted={!fixed}>
-                    Log in
-                  </Button>
-                  <Button
-                    as="a"
-                    inverted={!fixed}
-                    primary={fixed}
-                    style={{ marginLeft: "0.5em" }}
-                  >
-                    Sign Up
-                  </Button>
-                </Menu.Item>
+              <Container >
+                <Menu.Item as='a' href="#home" name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+                <Menu.Item as='a' href="#who" name='about me' active={activeItem === 'about me'} onClick={this.handleItemClick} />
+                <Menu.Item as='a' href="#works" name='works done' active={activeItem === 'works done'} onClick={this.handleItemClick} />
+                <Menu.Item as='a' href="#contacts" name='contacts' active={activeItem === 'contacts'} onClick={this.handleItemClick} />
               </Container>
             </Menu>
-            <HomepageHeading />
+            <HomepageHeading /> 
           </Segment>
         </Visibility>
 
         {children}
+       
       </Responsive>
+      
     );
   }
 }

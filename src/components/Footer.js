@@ -1,37 +1,88 @@
 import React from "react";
-import { Container, Grid, Header, List, Segment } from "semantic-ui-react";
+import {
+  Container,
+  Grid,
+  Header,
+  List,
+  Segment,
+  Image
+} from "semantic-ui-react";
 
 const Footer = () => (
-  <Segment inverted vertical style={{ padding: "5em 0em" }}>
+  <Segment
+    id="contacts"
+    inverted
+    vertical
+    style={{ padding: "5em 0em", backgroundColor: "#207c8c" }}
+  >
     <Container>
       <Grid divided inverted stackable>
         <Grid.Row>
           <Grid.Column width={3}>
             <Header inverted as="h4" content="About" />
-            <List link inverted>
-              <List.Item as="a">Sitemap</List.Item>
-              <List.Item as="a">Contact Us</List.Item>
-              <List.Item as="a">Religious Ceremonies</List.Item>
-              <List.Item as="a">Gazebo Plans</List.Item>
+            <List inverted>
+              <List.Item>Mob. Phone: +37068047604</List.Item>
+              <List.Item>Email: a.vaickelionis@gmail.com</List.Item>
+              <List.Item>Country: Lithuania</List.Item>
+              <List.Item>City: Vilnius</List.Item>
             </List>
           </Grid.Column>
           <Grid.Column width={3}>
-            <Header inverted as="h4" content="Services" />
+            <Header inverted as="h4" content="Links" />
             <List link inverted>
-              <List.Item as="a">Banana Pre-Order</List.Item>
-              <List.Item as="a">DNA FAQ</List.Item>
-              <List.Item as="a">How To Access</List.Item>
-              <List.Item as="a">Favorite X-Men</List.Item>
+              <List.Item
+                as="a"
+                href="https://github.com/shefass"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </List.Item>
+              <List.Item
+                as="a"
+                href="https://codepen.io/shefass/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CodePen
+              </List.Item>
+              <List.Item
+                as="a"
+                href="https://twitter.com/shefass"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Twitter
+              </List.Item>
             </List>
           </Grid.Column>
           <Grid.Column width={7}>
-            <Header as="h4" inverted>
-              Footer Header
-            </Header>
-            <p>
-              Extra space for a call to action inside the footer that could help
-              re-engage users.
-            </p>
+            <Image
+              as="a"
+              id="github"
+              href="https://github.com/shefass"
+              target="_blank"
+              rel="noopener noreferrer"
+              src="https://github.com/shefass/MyFiles/blob/master/Octocat.png?raw=true"
+              size="tiny"
+            />
+
+            <Image
+              as="a"
+              href="https://twitter.com/shefass"
+              target="_blank"
+              rel="noopener noreferrer"
+              src="https://github.com/shefass/MyFiles/blob/master/Twitter_Logo_Blue.png?raw=true"
+              size="tiny"
+            />
+            <Image
+              as="a"
+              href="shefass@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
+              size="tiny"
+            />
           </Grid.Column>
         </Grid.Row>
       </Grid>

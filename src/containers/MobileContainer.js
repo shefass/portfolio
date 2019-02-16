@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import {
-  Button,
   Container,
   Icon,
   Menu,
@@ -37,37 +36,32 @@ export default class MobileContainer extends Component {
           vertical
           visible={sidebarOpened}
         >
-          <Menu.Item as="a" active>
+          <Menu.Item as="a" href="#home" onClick={this.handleSidebarHide}>
             Home
           </Menu.Item>
-          <Menu.Item as="a">Work</Menu.Item>
-          <Menu.Item as="a">Company</Menu.Item>
-          <Menu.Item as="a">Careers</Menu.Item>
-          <Menu.Item as="a">Log in</Menu.Item>
-          <Menu.Item as="a">Sign Up</Menu.Item>
+          <Menu.Item as="a" href="#who" onClick={this.handleSidebarHide}>
+            About Me
+          </Menu.Item>
+          <Menu.Item as="a" href="#works" onClick={this.handleSidebarHide}>
+            Works Done
+          </Menu.Item>
+          <Menu.Item as="a" href="#contacts" onClick={this.handleSidebarHide}>
+            Contacts
+          </Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 350, padding: "1em 0em" }}
+            style={{ backgroundColor: "#207c8c", minHeight: 300 }}
             vertical
-          >
-            <Container>
-              <Menu inverted pointing secondary size="large">
-                <Menu.Item onClick={this.handleToggle}>
-                  <Icon name="sidebar" />
-                </Menu.Item>
-                <Menu.Item position="right">
-                  <Button as="a" inverted>
-                    Log in
-                  </Button>
-                  <Button as="a" inverted style={{ marginLeft: "0.5em" }}>
-                    Sign Up
-                  </Button>
-                </Menu.Item>
-              </Menu>
+          ><Container style={{ float: "left"}} compact> 
+            <Icon
+              name="sidebar"
+              onClick={this.handleToggle}
+              
+            />
             </Container>
             <HomepageHeading mobile />
           </Segment>
