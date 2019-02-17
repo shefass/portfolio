@@ -10,33 +10,45 @@ const WhoIam = () => (
     <Grid container stackable verticalAlign="middle">
       <Grid.Row>
         <Grid.Column width={8}>
-          <Header as="h3" style={{ fontSize: "2em" }}>
-          Abilities
+          <Header as="h3" style={{ fontSize: "2em", textAlign: "center" }}>
+            Abilities
           </Header>
-          <p style={{ fontSize: "1.33em" }}>
-          I have passion for front-end/web-programming. I am a fast hands-on learner.
-           You can find all my project code on github including my portfolio website.
-            Kindly follow me on github to stay up to date with projects i work on.
+          <p
+            style={{
+              fontSize: "1.33em",
+              textIndent: "1.5em",
+              textAlign: "justify"
+            }}
+          >
+            I have passion for front-end/web-programming. I am a fast hands-on
+            learner. You can find all my project code on github including my
+            portfolio website. Kindly follow me on github to stay up to date
+            with projects i work on.
           </p>
-          <Header as="h3" style={{ fontSize: "2em" }}>
-          Goals
+          <Header as="h3" style={{ fontSize: "2em", textAlign: "center" }}>
+            Goals
           </Header>
-          <p style={{ fontSize: "1.33em" }}>
-          Learning new Front-end  technologies by hands-on application to real world problems is my top priority.
-           So contact me and we will cooperate!
+          <p
+            style={{
+              fontSize: "1.33em",
+              textIndent: "1.5em",
+              textAlign: "justify"
+            }}
+          >
+            Learning new Front-end technologies by hands-on application to real
+            world problems is my top priority. So contact me and we will
+            cooperate!
           </p>
-          <Header as="h3" style={{ fontSize: "2em" }}>
+          <Header as="h3" style={{ fontSize: "2em", textAlign: "center" }}>
             Skills
           </Header>
           <p style={{ fontSize: "1.33em" }}>
-          JS,React/Semantic (Intermediate level)
+            JS,React/Semantic (Intermediate level)
           </p>
           <p style={{ fontSize: "1.33em" }}>
-          React Native/Redux (Beginner level)
+            React Native/Redux (Beginner level)
           </p>
-          <p style={{ fontSize: "1.33em" }}>
-          Blockchain fundamentals 
-          </p>
+          <p style={{ fontSize: "1.33em" }}>Blockchain fundamentals</p>
         </Grid.Column>
         <Grid.Column floated="right" width={6}>
           <iframe

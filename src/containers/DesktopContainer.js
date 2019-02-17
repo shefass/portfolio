@@ -51,8 +51,8 @@ export default class DesktopContainer extends Component {
               <Container >
                 <Menu.Item as='a' href="#home" name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
                 <Menu.Item as='a' href="#who" name='about me' active={activeItem === 'about me'} onClick={this.handleItemClick} />
-                <Menu.Item as='a' href="#works" name='works done' active={activeItem === 'works done'} onClick={this.handleItemClick} />
-                <Menu.Item as='a' href="#contacts" name='contacts' active={activeItem === 'contacts'} onClick={this.handleItemClick} />
+                <Menu.Item as='a' href="#works" name='simple projects' active={activeItem === 'works done'} onClick={this.handleItemClick} />
+                <Menu.Item as='a' href="#contacts" name='contact' active={activeItem === 'contacts'} onClick={this.handleItemClick} />
               </Container>
             </Menu>
             <HomepageHeading /> 

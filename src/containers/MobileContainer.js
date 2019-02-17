@@ -43,10 +43,10 @@ export default class MobileContainer extends Component {
             About Me
           </Menu.Item>
           <Menu.Item as="a" href="#works" onClick={this.handleSidebarHide}>
-            Works Done
+            Simple Projects
           </Menu.Item>
           <Menu.Item as="a" href="#contacts" onClick={this.handleSidebarHide}>
-            Contacts
+            Contact
           </Menu.Item>
         </Sidebar>
 
