@@ -10,8 +10,6 @@ import {
 import { HomepageHeading } from "../components/Heading";
 import getWidth from "../constants/getWidth";
 
-
-
 export default class DesktopContainer extends Component {
   state = {};
 
@@ -25,7 +23,6 @@ export default class DesktopContainer extends Component {
     const { activeItem } = this.state;
 
     return (
-      
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
         <Visibility
           once={false}
@@ -35,10 +32,13 @@ export default class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 700, padding: "1em 1em", backgroundColor: '#207c8c' }}
+            style={{
+              minHeight: 700,
+              padding: "1em 1em",
+              backgroundColor: "#207c8c"
+            }}
             vertical
-            
-                      >
+          >
             <Menu
               fixed={fixed ? "top" : null}
               inverted={!fixed}
@@ -46,23 +46,44 @@ export default class DesktopContainer extends Component {
               secondary={!fixed}
               size="huge"
               widths={4}
-              
             >
-              <Container >
-                <Menu.Item as='a' href="#home" name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
-                <Menu.Item as='a' href="#who" name='about me' active={activeItem === 'about me'} onClick={this.handleItemClick} />
-                <Menu.Item as='a' href="#works" name='simple projects' active={activeItem === 'works done'} onClick={this.handleItemClick} />
-                <Menu.Item as='a' href="#contacts" name='contact' active={activeItem === 'contacts'} onClick={this.handleItemClick} />
+              <Container>
+                <Menu.Item
+                  as="a"
+                  href="#home"
+                  name="home"
+                  active={activeItem === "home"}
+                  onClick={this.handleItemClick}
+                />
+                <Menu.Item
+                  as="a"
+                  href="#who"
+                  name="about me"
+                  active={activeItem === "about me"}
+                  onClick={this.handleItemClick}
+                />
+                <Menu.Item
+                  as="a"
+                  href="#works"
+                  name="simple projects"
+                  active={activeItem === "works done"}
+                  onClick={this.handleItemClick}
+                />
+                <Menu.Item
+                  as="a"
+                  href="#contacts"
+                  name="contact"
+                  active={activeItem === "contacts"}
+                  onClick={this.handleItemClick}
+                />
               </Container>
             </Menu>
-            <HomepageHeading /> 
+            <HomepageHeading />
           </Segment>
         </Visibility>
 
         {children}
-       
       </Responsive>
-      
     );
   }
 }

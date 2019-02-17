@@ -15,7 +15,7 @@ const Footer = () => (
     id="contacts"
     inverted
     vertical
-    style={{ padding: "5em 0em", backgroundColor: "#207c8c" }}
+    style={{ padding: "3em 0em", backgroundColor: "#207c8c" }}
   >
     <Container>
       <Grid divided inverted stackable>
@@ -30,7 +30,7 @@ const Footer = () => (
               </List.Item>
             </List>
           </Grid.Column>
-          <Grid.Column width={2}>
+          <Grid.Column width={2} textAlign='center' >
             <Image
               centered
               as="a"
@@ -41,9 +41,9 @@ const Footer = () => (
               src="https://github.com/shefass/MyFiles/blob/master/Octocat.png?raw=true"
               size="tiny"
             />
-            <p style={{ marginTop: "11px", marginLeft: '1em' }}>GitHub</p>
+            <p style={{ marginTop: "11px" }}>GitHub</p>
           </Grid.Column>
-          <Grid.Column width={2}>
+          <Grid.Column width={2} textAlign='center'>
             <Image
               centered
               as="a"
@@ -54,9 +54,9 @@ const Footer = () => (
               src={codepen}
               size="tiny"
             />
-            <p style={{marginLeft: '0.7em'}}>CodePen</p>
+            <p>CodePen</p>
           </Grid.Column>
-          <Grid.Column width={2}>
+          <Grid.Column width={2} textAlign='center'>
             <Image
               centered
               as="a"
@@ -67,7 +67,7 @@ const Footer = () => (
               src="https://github.com/shefass/MyFiles/blob/master/Twitter_Logo_Blue.png?raw=true"
               size="tiny"
             />
-            <p style={{marginLeft: '1em'}}> Twitter</p>
+            <p> Twitter</p>
           </Grid.Column>
         </Grid.Row>
       </Grid>

@@ -50,7 +50,7 @@ const WhoIam = () => (
           </p>
           <p style={{ fontSize: "1.33em" }}>Blockchain fundamentals</p>
         </Grid.Column>
-        <Grid.Column floated="right" width={6}>
+        <Grid.Column width={8} textAlign='center'>
           <iframe
             title="mobile"
             src="//www.appdemostore.com/embed?id=4662195351715840"

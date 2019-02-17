@@ -71,6 +71,25 @@ button {
   font-size: 4em;
   color: var(--main-txt-color);
 }
+@media screen and (max-width: 450px) {
+  #wrapper {
+    height: 80vh;
+  }
+  #author {
+    font-size: 2em;
+  }
+  #text {
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-height: 400px) {
+  #author {
+    font-size: 2.5em;
+  }
+  #text {
+    font-size: 1.8em;
+  }
+ }
 /*
 @media screen and (max-width: 650px) {
   #quote-box{ 

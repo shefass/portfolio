@@ -74,6 +74,9 @@
 }
 
 @media screen and (max-width: 450px) {
+  .Wrapper {
+    height: 80vh;
+  }
   #drum-machine {
     height: 70%;
     width: 100%;
