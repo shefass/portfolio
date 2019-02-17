@@ -11,7 +11,7 @@ const WhoIam = () => (
       <Grid.Row>
         <Grid.Column width={8}>
           <Header as="h3" style={{ fontSize: "2em" }}>
-            What I can do...
+          Abilities
           </Header>
           <p style={{ fontSize: "1.33em" }}>
           I have passion for front-end/web-programming. I am a fast hands-on learner.
@@ -19,7 +19,7 @@ const WhoIam = () => (
             Kindly follow me on github to stay up to date with projects i work on.
           </p>
           <Header as="h3" style={{ fontSize: "2em" }}>
-            What I want...
+          Goals
           </Header>
           <p style={{ fontSize: "1.33em" }}>
           Learning new Front-end  technologies by hands-on application to real world problems is my top priority.
