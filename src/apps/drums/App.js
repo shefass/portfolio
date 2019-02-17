@@ -20,7 +20,7 @@ class Drums extends Component {
     );
   }
   componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyPress); 
+    document.removeEventListener("keydown", this.handleKeyPress);
     data.map(a =>
       document.getElementById(a.id).removeEventListener("click", this.click)
     );
@@ -34,7 +34,6 @@ class Drums extends Component {
     });
   };
 
- 
   timeOut = () => {
     this.setState({
       id: ""

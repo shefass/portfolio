@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Grid, Header, Image, Segment } from "semantic-ui-react";
+import { Grid, Header, Segment } from "semantic-ui-react";
 
 const WhoIam = () => (
   <Segment
@@ -50,7 +50,7 @@ const WhoIam = () => (
           </p>
           <p style={{ fontSize: "1.33em" }}>Blockchain fundamentals</p>
         </Grid.Column>
-        <Grid.Column width={8} textAlign='center'>
+        <Grid.Column width={8} textAlign="center">
           <iframe
             title="mobile"
             src="//www.appdemostore.com/embed?id=4662195351715840"

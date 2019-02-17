@@ -1,12 +1,12 @@
 import React from "react";
 import { Grid, Header, Image, Segment } from "semantic-ui-react";
 import portfolio from "../pictures/portfolio.jpg";
-import Drums from '../apps/drums/App';
-import Quates from '../apps/quates/App';
+import Drums from "../apps/drums/App";
+import Quates from "../apps/quates/App";
 
 const WorksDoneSplited = () => (
   <Segment
-    id='works'
+    id="works"
     style={{ padding: "0em", backgroundColor: "hsl(120, 100%, 95%)" }}
     vertical
   >
@@ -22,7 +22,7 @@ const WorksDoneSplited = () => (
           <Header as="h3" style={{ fontSize: "2em" }}>
             Get random quates
           </Header>
-         <Quates />
+          <Quates />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row textAlign="center">
@@ -56,10 +56,3 @@ const WorksDoneSplited = () => (
 );
 
 export default WorksDoneSplited;
-/*   <a
-            href="https://shefass.github.io/quote/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src="https://github.com/shefass/quote/blob/gh-pages/quote.png?raw=true" />
-          </a> */

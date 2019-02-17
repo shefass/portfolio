@@ -56,12 +56,9 @@ export default class MobileContainer extends Component {
             textAlign="center"
             style={{ backgroundColor: "#207c8c", minHeight: 300 }}
             vertical
-          ><Container style={{ float: "left"}} compact> 
-            <Icon
-              name="sidebar"
-              onClick={this.handleToggle}
-              
-            />
+          >
+            <Container style={{ float: "left" }} compact>
+              <Icon name="sidebar" onClick={this.handleToggle} />
             </Container>
             <HomepageHeading mobile />
           </Segment>

@@ -90,37 +90,3 @@ button {
     font-size: 1.8em;
   }
  }
-/*
-@media screen and (max-width: 650px) {
-  #quote-box{ 
-    width: 95vw;
-    height: 60vh;
-  }
-}
-@media screen and (max-width: 400px) {
-  #quote-box{ 
-    width: 95vw;
-    height: 80vh;
-  }
-  #text {
-    font-size: 2em;
-    font-family: "Fira Sans", sans-serif;
-    margin: 0px 2px;
-  }
-  #author {
-    font-size: 2em;
-  }
-}
-@media screen and (max-height : 770px) {
-  #quote-box{ 
-    width: 95vw;
-    height:95vh;
-  }
-}
-@media screen and (max-height :450px) {
-  #text {
-    font-size: 1.5em;
-    margin: 0px 2px;
-  }
-}
-*/

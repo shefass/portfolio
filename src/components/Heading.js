@@ -1,12 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import {
-  Container,
-  Header,
-  Grid,
-  Reveal,
-  Image
-} from "semantic-ui-react";
+import { Container, Header, Grid, Reveal, Image } from "semantic-ui-react";
 import lenin from "../pictures/lenin.jpg";
 import leninH from "../pictures/leninFiller.jpg";
 import limusine from "../pictures/Limusine.jpg";
@@ -48,7 +42,7 @@ export const HomepageHeading = ({ mobile }) => (
               fontWeight: "normal",
               marginTop: mobile ? "0.5em" : "1.5em",
               marginLeft: mobile ? "-1.5em" : "0em",
-              textAlign: 'justify',
+              textAlign: "justify",
               textIndent: "1.5em"
             }}
           />
