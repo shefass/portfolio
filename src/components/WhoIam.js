@@ -14,27 +14,28 @@ const WhoIam = () => (
             What I can do...
           </Header>
           <p style={{ fontSize: "1.33em" }}>
-            I can learn new technologies fast, because I like it. I learn by doing variaus projects, I think it is best way to learn.
-            All my code are at Github (this sites code too) and will be at this portfolio site, so bookmark this site and follow my Github.
+          I have passion for front-end/web-programming. I am a fast hands-on learner.
+           You can find all my project code on github including my portfolio website.
+            Kindly follow me on github to stay up to date with projects i work on.
           </p>
           <Header as="h3" style={{ fontSize: "2em" }}>
             What I want...
           </Header>
           <p style={{ fontSize: "1.33em" }}>
-            I want to learn more! I can learn by working on your projects. So contact me and we will cooperate! I am interested 
-            to front end development side.
+          Learning new Front-end  technologies by hands-on application to real world problems is my top priority.
+           So contact me and we will cooperate!
           </p>
           <Header as="h3" style={{ fontSize: "2em" }}>
-            What I know...
+            Skills
           </Header>
           <p style={{ fontSize: "1.33em" }}>
-            My main programing language: JavaScript.
+          JS,React/Semantic (Intermediate level)
           </p>
           <p style={{ fontSize: "1.33em" }}>
-            My main UI framework: React/Semantic.
+          React Native/Redux (Beginner level)
           </p>
           <p style={{ fontSize: "1.33em" }}>
-            Now main learning focus: Redux (and its 'addons') and ReactNative.
+          Blockchain fundamentals 
           </p>
         </Grid.Column>
         <Grid.Column floated="right" width={6}>

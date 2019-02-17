@@ -42,7 +42,9 @@ export const HomepageHeading = ({ mobile }) => (
           />
           <Header
             as="h2"
-            content="I am Algirdas, take a look to my works"
+            content="My name is Algirdas Vaickelionis. I have been learning front end developer for the last 6 months. 
+            I am familiar with JS, React, React Native...
+            Please find the projects I have developed so far down below"
             inverted
             style={{
               fontSize: mobile ? "1.5em" : "1.7em",
