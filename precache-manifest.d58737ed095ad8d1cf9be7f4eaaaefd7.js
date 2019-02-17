@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
-    "url": "/portfolio/static/media/outline-icons.ad97afd3.ttf"
+    "revision": "701ae6abd4719e9c2ada3535a497b341",
+    "url": "/portfolio/static/media/outline-icons.701ae6ab.eot"
   },
   {
-    "revision": "f208004a18e5f03720c0",
+    "revision": "1a977bae51d2f4338e4a",
     "url": "/portfolio/static/css/main.0d9dd46d.chunk.css"
   },
   {
@@ -36,20 +36,20 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/flags.9c74e172.png"
   },
   {
-    "revision": "cd6c777f1945164224dee082abaea03a",
-    "url": "/portfolio/static/media/outline-icons.cd6c777f.woff2"
-  },
-  {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
     "url": "/portfolio/static/media/outline-icons.ef60a4f6.woff"
   },
   {
-    "revision": "701ae6abd4719e9c2ada3535a497b341",
-    "url": "/portfolio/static/media/outline-icons.701ae6ab.eot"
+    "revision": "cd6c777f1945164224dee082abaea03a",
+    "url": "/portfolio/static/media/outline-icons.cd6c777f.woff2"
   },
   {
-    "revision": "f208004a18e5f03720c0",
-    "url": "/portfolio/static/js/main.f208004a.chunk.js"
+    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
+    "url": "/portfolio/static/media/outline-icons.ad97afd3.ttf"
+  },
+  {
+    "revision": "1a977bae51d2f4338e4a",
+    "url": "/portfolio/static/js/main.1a977bae.chunk.js"
   },
   {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
@@ -76,12 +76,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/icons.8e3c7f55.eot"
   },
   {
-    "revision": "13db00b7a34fee4d819ab7f9838cc428",
-    "url": "/portfolio/static/media/brand-icons.13db00b7.eot"
-  },
-  {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
     "url": "/portfolio/static/media/brand-icons.c5ebe0b3.ttf"
+  },
+  {
+    "revision": "13db00b7a34fee4d819ab7f9838cc428",
+    "url": "/portfolio/static/media/brand-icons.13db00b7.eot"
   },
   {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/css/2.f905fe8d.chunk.css"
   },
   {
-    "revision": "c843fec073a2b28ddb61cf39982c19ba",
+    "revision": "cdec84577da575b926004971b58aedf3",
     "url": "/portfolio/index.html"
   }
 ];
