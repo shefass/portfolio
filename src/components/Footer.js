@@ -24,7 +24,7 @@ const Footer = () => (
             <Header inverted as="h4" content="Contact" />
             <List inverted>
               <List.Item>Mob. Phone: +37068047604</List.Item>
-              <List.Item>Email: a.vaickelionis@gmail.com</List.Item>
+              <List.Item>Email: algirdas@vaickelionis.com</List.Item>
               <List.Item>
                 Country: Lithuania{" "}
                 <Flag name="lt" style={{ marginLeft: "0.5em" }} />
