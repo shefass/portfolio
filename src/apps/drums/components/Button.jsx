@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import PlayMusic from "./PlayMusic";
+import { PlayMusic } from "./PlayMusic";
+import styled from "styled-components";
 
 class Button extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hasCapture: false
-    };
-  }
+  state = {
+    hasCapture: false
+  };
+
   onEnter = e => {
     this.setState({ hasCapture: true });
   };
@@ -16,28 +15,46 @@ class Button extends Component {
   };
 
   render() {
+    const { letter, id } = this.props;
     const styles = {
       backgroundColor: this.state.hasCapture ? "pink" : "yellow",
-      color: this.props.letter === this.props.id && "blueviolet",
-      height: this.props.letter === this.props.id && "70%",
-      width: this.props.letter === this.props.id && "70%"
+      color: letter === id && "blueviolet",
+      height: letter === id && "70%",
+      width: letter === id && "70%"
     };
-    const padStyle = {};
+
     return (
-      <div className="drum-pad" style={padStyle}>
-        <div
+      <StyledDrumPad>
+        <StyledDrumItem
           className="drum-item"
-          id={this.props.letter}
+          id={letter}
           onPointerEnter={this.onEnter}
           onPointerLeave={this.onLeave}
           style={styles}
         >
-          {this.props.letter === this.props.id && <PlayMusic id={this.props.id} />}
-          {this.props.letter}
-        </div>
-      </div>
+          {letter === id && <PlayMusic id={id} />}
+          {letter}
+        </StyledDrumItem>
+      </StyledDrumPad>
     );
   }
 }
 
+const StyledDrumPad = styled.div`
+justify-content: center;
+  align-items: center;
+  display: flex;
+`
+const StyledDrumItem = styled.div`
+border: 1px solid blueviolet;
+
+  border-radius: 25px;
+  height: 75%;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5em;
+  box-shadow: 2px 2px;
+`
 export default Button;

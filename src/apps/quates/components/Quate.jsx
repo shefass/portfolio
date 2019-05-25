@@ -1,4 +1,13 @@
 import React, { Component } from "react";
+import {
+  Segment,
+  Header,
+  Container,
+  Grid,
+  Button,
+  Icon,
+  Responsive
+} from "semantic-ui-react";
 
 import { axiosRapidApihQL, twitter, colors } from "./defaults";
 
@@ -8,48 +17,12 @@ class Quate extends Component {
     isLoaded: false,
     title: "",
     colors: 0,
-    hasCaptureQuote: false,
-    hasCaptureTweet: false,
     content: []
   };
 
   componentDidMount() {
     this.apicallTest();
   }
-
-  changeColors = () => {
-    if (this.state.colors > 4) {
-      this.setState({
-        colors: 0
-      });
-    } else {
-      this.setState({
-        colors: this.state.colors + 1
-      });
-    }
-
-    setTimeout(
-      () =>
-        document.documentElement.style.setProperty(
-          "--main-bg-color",
-          colors[this.state.colors].bg
-        ),
-      200
-    );
-    setTimeout(
-      () =>
-        document.documentElement.style.setProperty(
-          "--main-txt-color",
-          colors[this.state.colors].txt
-        ),
-      200
-    );
-  };
-
-  doTwoActions = () => {
-    this.apicallTest();
-    this.changeColors();
-  };
 
   apicallTest = () => {
     axiosRapidApihQL.post().then(
@@ -68,78 +41,105 @@ class Quate extends Component {
       }
     );
   };
-  onEnterQuote = e => {
-    this.setState({ hasCaptureQuote: true });
+
+  changeColors = () => {
+    if (this.state.colors > 4) {
+      this.setState({
+        colors: 0
+      });
+    } else {
+      this.setState({
+        colors: this.state.colors + 1
+      });
+    }
   };
-  onLeaveQuote = e => {
-    this.setState({ hasCaptureQuote: false });
-  };
-  onEnterTweet = e => {
-    this.setState({ hasCaptureTweet: true });
-  };
-  onLeaveTweet = e => {
-    this.setState({ hasCaptureTweet: false });
+
+  doTwoActions = () => {
+    this.apicallTest();
+    this.changeColors();
   };
 
   render() {
-    const {
-      error,
-      isLoaded,
-      title,
-      content,
-      hasCaptureTweet,
-      hasCaptureQuote
-    } = this.state;
-    const buttonHoverQuote = {
-      backgroundColor: hasCaptureQuote && "white",
-      color: hasCaptureQuote && "black"
-    };
-    const spanStyle = {
-      padding: hasCaptureQuote && "10px",
-      transition: "0.5s"
-    };
-    const buttonHoverTweet = {
-      backgroundColor: hasCaptureTweet && "white",
-      color: hasCaptureTweet && "black"
+    const { error, isLoaded, title, content } = this.state;
+
+    const style = {
+      container: {
+        backgroundColor: colors[this.state.colors].txt,
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "1em"
+      },
+      color: {
+        color: colors[this.state.colors].txt
+      },
+      textcolor: {
+        fontSize: "2em",
+        marginBottom: "1em",
+        lineHeight: "1em",
+        backgroundColor: colors[this.state.colors].bg,
+        color: colors[this.state.colors].txt
+      },
+      background: {
+        backgroundColor: colors[this.state.colors].bg,
+        borderRadius: "20px",
+        width: "90%"
+      }
     };
 
     if (error) {
-      return <div>Error: {error.message}</div>;
+      return <Segment>Error: {error.message}</Segment>;
     } else if (!isLoaded) {
-      return <div id="loading">Loading...</div>;
+      return (
+        <Responsive style={style.container}>
+          <Segment size="massive" style={{ color: "teal" }}>
+            Loading...
+          </Segment>
+        </Responsive>
+      );
     } else {
       return (
-        <div id="quote-box">
-          <h1 id="author">{title}</h1>
-          <div id="text">{content}</div>
-          <div id="buttons">
-            <button
-              id="new-quote"
-              type="button"
-              onPointerEnter={this.onEnterQuote}
-              onPointerLeave={this.onLeaveQuote}
-              style={buttonHoverQuote}
-              onClick={this.doTwoActions}
+        <Responsive style={style.container}>
+          <Segment textAlign="center" style={style.background}>
+            <Header
+              as="h1"
+              color={style.color.color}
+              style={{ fontSize: "3em" }}
             >
-              <span style={spanStyle}>Next Quote</span>
-            </button>
-            <a
-              href={`${twitter}${title}: "${content}"`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button
-                id="tweet-quote"
-                type="button"
-                onPointerEnter={this.onEnterTweet}
-                onPointerLeave={this.onLeaveTweet}
-                style={buttonHoverTweet}
-              >
-                Tweet!
-              </button>
-            </a>
-          </div>
-        </div>
+              {title}
+            </Header>
+            <Segment basic text style={style.textcolor}>
+              {content}
+            </Segment>
+            <Grid>
+              <Grid.Row>
+                <Grid.Column width={8}>
+                  <Button
+                    content="Next Quote"
+                    size="medium"
+                    onClick={this.doTwoActions}
+                    color={style.color.color}
+                    icon="right arrow"
+                    labelPosition="right"
+                  />
+                </Grid.Column>
+                <Grid.Column width={8}>
+                  <Button
+                    as="a"
+                    size="medium"
+                    href={`${twitter}${title}: "${content}"`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    color={style.color.color}
+                  >
+                    <Icon name="twitter" /> Tweet!
+                  </Button>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Segment>
+        </Responsive>
       );
     }
   }

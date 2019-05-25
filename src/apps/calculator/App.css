@@ -1,0 +1,10 @@
+/*I need remove this too*/
+#clear {
+  grid-column: 1 / 3;
+}
+#zero {
+  grid-column: 1 / 3;
+}
+#equals {
+  grid-area: 4 / 4 / 6 / 5;
+}

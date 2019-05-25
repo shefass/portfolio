@@ -33,7 +33,8 @@ export const HomepageHeading = ({ mobile }) => (
           />
           <Header
             as="h2"
-            content="My name is Algirdas Vaickelionis. I have been learning front end developer for the last 6 months. 
+            content="My name is Algirdas Vaickelionis. I am dreamer and incurable
+            optimist. 
             I am familiar with JS, React, React Native...
             Please find the projects I have developed so far down below."
             inverted

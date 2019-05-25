@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Header, Segment } from "semantic-ui-react";
+import Calculator from '../apps/calculator/App';
 
 const WhoIam = () => (
   <Segment
@@ -20,8 +21,8 @@ const WhoIam = () => (
               textAlign: "justify"
             }}
           >
-            I have passion for front-end/web-programming. I am a fast hands-on
-            learner. You can find all my project code on github including my
+            I have passion for coding and open source. I am a fast hands-on
+            learner. You can find all my project code on github including this
             portfolio website. Kindly follow me on github to stay up to date
             with projects i work on.
           </p>
@@ -35,29 +36,22 @@ const WhoIam = () => (
               textAlign: "justify"
             }}
           >
-            Learning new Front-end technologies by hands-on application to real
-            world problems is my top priority. So contact me and we will
-            cooperate!
+            To make the world a better place. I believe with the code we can do it. So contact me and we will
+            change it together!
           </p>
           <Header as="h3" style={{ fontSize: "2em", textAlign: "center" }}>
             Skills
           </Header>
           <p style={{ fontSize: "1.33em" }}>
-            JS,React/Semantic (Intermediate level)
+            JS,React/Redux/Thunk (Intermediate level)
           </p>
           <p style={{ fontSize: "1.33em" }}>
-            React Native/Redux (Beginner level)
+            React Native, Semantic UI (Beginner level)
           </p>
           <p style={{ fontSize: "1.33em" }}>Blockchain fundamentals</p>
         </Grid.Column>
         <Grid.Column width={8} textAlign="center">
-          <iframe
-            title="mobile"
-            src="//www.appdemostore.com/embed?id=4662195351715840"
-            width="289"
-            height="580"
-            frameborder="0"
-          />
+          <Calculator />
         </Grid.Column>
       </Grid.Row>
     </Grid>

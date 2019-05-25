@@ -1,17 +1,10 @@
 import React, { Component } from "react";
-import "./App.css";
 import Quate from "./components/Quate";
 
-class Quates extends Component {
+class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <div id="wrapper">
-          <Quate />
-        </div>
-      </div>
-    );
+    return <Quate />;
   }
 }
 
-export default Quates;
+export default App;

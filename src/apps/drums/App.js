@@ -1,62 +1,73 @@
 import React, { Component } from "react";
-import "./App.css";
 import data from "./components/data/data";
-import Display from "./components/Display.jsx";
+import { Display } from "./components/Display.js";
 import Button from "./components/Button.jsx";
+import styled from "styled-components";
 
 var time;
-class Drums extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id: ""
-    };
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-  }
+class App extends Component {
+  state = {
+    id: ""
+  };
+
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyPress);
+    document.addEventListener("keyup", this.handleKeyUp);
     data.map(a =>
       document.getElementById(a.id).addEventListener("mousedown", this.click)
+    );
+    data.map(a =>
+      document.getElementById(a.id).addEventListener("mouseup", this.clickEnd)
     );
   }
   componentWillUnmount() {
     document.removeEventListener("keydown", this.handleKeyPress);
+    document.removeEventListener("keyup", this.handleKeyUp);
     data.map(a =>
-      document.getElementById(a.id).removeEventListener("click", this.click)
+      document.getElementById(a.id).removeEventListener("mousedown", this.click)
+    );
+    data.map(a =>
+      document.getElementById(a.id).removeEventListener("mouseup", this.clickEnd)
     );
   }
 
   click = event => {
-    time = setTimeout(this.timeOut, 1000);
-
+    clearTimeout(time);
     this.setState({
       id: event.srcElement.id
     });
   };
 
-  timeOut = () => {
-    this.setState({
-      id: ""
-    });
-    clearTimeout(time);
+  clickEnd = () => {
+    time = setTimeout(
+      () =>
+        this.setState({
+          id: ""
+        }),
+      1000
+    );
   };
 
-  handleKeyPress(event) {
+  handleKeyPress = event => {
     let idObject = data.filter(a => event.keyCode === a.keyCode);
-    time = setTimeout(this.timeOut, 1000);
-
     if (idObject.length > 0) {
       this.setState({
         id: idObject[0].id
       });
     }
-  }
+  };
+
+  handleKeyUp = () => {
+    this.setState({
+      id: ""
+    });
+  };
 
   render() {
     return (
-      <div className="Wrapper">
-        <div id="drum-machine">
-          <div id="keyboard">
+      <StyledAppsWarpper>
+        <StyledDrumMachine>
+          <StyledKeyboard>
             {data.map(a => (
               <Button
                 letter={a.id}
@@ -66,20 +77,84 @@ class Drums extends Component {
                 sound={a.sound}
               />
             ))}
-          </div>
-          <div id="control">
-            <div id="display">
+          </StyledKeyboard>
+          <StyledControl>
+            <StyledDisplayWrapper>
               <Display id={this.state.id} />
-            </div>
-            <div>
-              <p className="text">Push keyboard!!</p>
-              <p className="text">Or use your mouse.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+            </StyledDisplayWrapper>
+            <StyledText>
+              <p>Push keyboard!!</p>
+              <p>Or use your mouse.</p>
+              <p>Here goes switches for control.</p>
+            </StyledText>
+          </StyledControl>
+        </StyledDrumMachine>
+      </StyledAppsWarpper>
     );
   }
 }
+const StyledAppsWarpper = styled.div`
+  box-sizing: border-box;
+  background-color: azure;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`; 
 
-export default Drums;
+const StyledDisplayWrapper = styled.div`
+  border: 3px solid rgb(80, 83, 73);
+  background-color: rgb(187, 144, 228);
+  border-radius: 25px;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  margin: 4% 4% 4% 0%;
+  @media (max-height: 400px) {
+    font-size: 1.5em;
+  }
+  @media (max-width: 450px) {
+    font-size: 1.5em;
+  }
+`;
+
+const StyledDrumMachine = styled.div`
+  border: 2px solid blueviolet;
+  background-color: blueviolet;
+  border-radius: 25px;
+  height: 60%;
+  width: 70%
+  display: flex;
+  @media (max-width: 750px) {
+    height: 75%;
+  }
+  @media (max-width: 450px) {
+    height: 70%;
+    min-width: 300px;
+  }
+`;
+const StyledKeyboard = styled.div`
+  width: 70%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+`;
+
+const StyledControl = styled.div`
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`;
+const StyledText = styled.div`
+  height: 70%;
+  font-size: 1.3em;
+  @media (max-height: 400px) {
+    font-size: 1em;
+  }
+`;
+export default App;

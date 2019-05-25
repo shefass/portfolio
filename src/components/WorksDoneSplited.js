@@ -3,6 +3,7 @@ import { Grid, Header, Image, Segment } from "semantic-ui-react";
 import portfolio from "../pictures/portfolio.jpg";
 import Drums from "../apps/drums/App";
 import Quates from "../apps/quates/App";
+import Pomodoro from "../apps/pomodoro/App";
 
 const WorksDoneSplited = () => (
   <Segment
@@ -10,24 +11,28 @@ const WorksDoneSplited = () => (
     style={{ padding: "0em", backgroundColor: "hsl(120, 100%, 95%)" }}
     vertical
   >
+    <Grid.Row textAlign="center">
+        <Pomodoro />
+      </Grid.Row>
     <Grid celled="internally" columns="equal" stackable>
+      
       <Grid.Row textAlign="center">
-        <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-          <Header as="h3" style={{ fontSize: "2em" }}>
+        <Grid.Column style={styles.column}>
+          <Header as="h3" style={styles.text}>
             Use your mouse or keyboard
           </Header>
           <Drums />
         </Grid.Column>
-        <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-          <Header as="h3" style={{ fontSize: "2em" }}>
+        <Grid.Column style={styles.column}>
+          <Header as="h3" style={styles.text}>
             Get random quates
           </Header>
           <Quates />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row textAlign="center">
-        <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-          <Header as="h3" style={{ fontSize: "2em" }}>
+        <Grid.Column style={styles.column}>
+          <Header as="h3" style={styles.text}>
             Vanila HTML/CSS landing page
           </Header>
           <a
@@ -38,8 +43,8 @@ const WorksDoneSplited = () => (
             <Image src="https://github.com/shefass/MyFiles/blob/master/landingpage.png?raw=true" />
           </a>
         </Grid.Column>
-        <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-          <Header as="h3" style={{ fontSize: "2em" }}>
+        <Grid.Column style={styles.column}>
+          <Header as="h3" style={styles.text}>
             Old portfolio page
           </Header>
           <a
@@ -54,5 +59,15 @@ const WorksDoneSplited = () => (
     </Grid>
   </Segment>
 );
+
+const styles = {
+  column: {
+    paddingBottom: "5em",
+    paddingTop: "5em" 
+  },
+  text: {
+    fontSize: "2em"
+  }
+}
 
 export default WorksDoneSplited;
