@@ -44,7 +44,7 @@ const WhoIam = () => (
             Skills
           </Header>
           <p style={{ fontSize: "1.33em" }}>
-          Front-end: JS,React/Redux/Thunk, React Native..
+          Front-end: JS,React/Redux/Thunk, <a href="https://github.com/shefass/kittensRN" target="_blank" rel="noopener noreferrer"> React Native</a>..
           </p>
           <p style={{ fontSize: "1.33em" }}>
            Back-end: Node.js, Express, Git, Npm, SQL, MangoDb...
