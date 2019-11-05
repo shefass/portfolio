@@ -25,10 +25,10 @@ export const HomepageHeading = ({ mobile }) => (
             content="Welcome!!"
             inverted
             style={{
-              fontSize: mobile ? "2em" : "4em",
+              fontSize: mobile ? "2em" : "3em",
               fontWeight: "normal",
               marginBottom: 0,
-              marginTop: mobile ? "0em" : "3em"
+              marginTop: mobile ? "0em" : "1em"
             }}
           />
           <Header
@@ -39,7 +39,7 @@ export const HomepageHeading = ({ mobile }) => (
             Please find the projects I have developed so far down below."
             inverted
             style={{
-              fontSize: mobile ? "1.5em" : "1.7em",
+              fontSize: "1.5em",
               fontWeight: "normal",
               marginTop: mobile ? "0.5em" : "1.5em",
               marginLeft: mobile ? "-1.5em" : "0em",
@@ -48,7 +48,7 @@ export const HomepageHeading = ({ mobile }) => (
             }}
           />
         </Grid.Column>
-        <Grid.Column width={mobile ? null : 4} style={{ marginTop: "6em" }}>
+        <Grid.Column width={mobile ? null : 4} style={{ marginTop: "5em" }}>
           <Reveal animated="move up">
             <Reveal.Content visible>
               <Image src={leninH} />

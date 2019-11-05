@@ -4,7 +4,7 @@ import Calculator from '../apps/calculator/App';
 
 const WhoIam = () => (
   <Segment
-    style={{ padding: "8em 0em", backgroundColor: "hsl(120, 100%, 95%)" }}
+    style={{ padding: "4em 0em", backgroundColor: "hsl(120, 100%, 95%)" }}
     id="who"
     vertical
   >

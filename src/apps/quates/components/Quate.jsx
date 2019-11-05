@@ -65,6 +65,7 @@ class Quate extends Component {
       container: {
         backgroundColor: colors[this.state.colors].txt,
         height: "100vh",
+        minHeight: "500px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

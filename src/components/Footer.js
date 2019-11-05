@@ -24,14 +24,14 @@ const Footer = () => (
             <Header inverted as="h4" content="Contact" />
             <List inverted>
               <List.Item>Mob. Phone: +37068047604</List.Item>
-              <List.Item>Email: algirdas@vaickelionis.com</List.Item>
+              <List.Item>Email: a.vaickelionis@gmail.com</List.Item>
               <List.Item>
                 Country: Lithuania{" "}
                 <Flag name="lt" style={{ marginLeft: "0.5em" }} />
               </List.Item>
             </List>
           </Grid.Column>
-          <Grid.Column width={2} textAlign="center">
+          <Grid.Column width={4} textAlign="center">
             <Image
               centered
               as="a"
@@ -44,20 +44,9 @@ const Footer = () => (
             />
             <p style={{ marginTop: "11px" }}>GitHub</p>
           </Grid.Column>
-          <Grid.Column width={2} textAlign="center">
-            <Image
-              centered
-              as="a"
-              id="github"
-              href="https://codepen.io/shefass/"
-              target="_blank"
-              rel="noopener noreferrer"
-              src={codepen}
-              size="tiny"
-            />
-            <p>CodePen</p>
-          </Grid.Column>
-          <Grid.Column width={2} textAlign="center">
+        
+        
+          <Grid.Column width={4} textAlign="center">
             <Image
               centered
               as="a"

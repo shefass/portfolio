@@ -33,7 +33,7 @@ export default class DesktopContainer extends Component {
             inverted
             textAlign="center"
             style={{
-              minHeight: 700,
+              height: "100vh",
               padding: "1em 1em",
               backgroundColor: "#207c8c"
             }}

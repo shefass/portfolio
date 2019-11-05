@@ -27,7 +27,9 @@ class App extends Component {
       document.getElementById(a.id).removeEventListener("mousedown", this.click)
     );
     data.map(a =>
-      document.getElementById(a.id).removeEventListener("mouseup", this.clickEnd)
+      document
+        .getElementById(a.id)
+        .removeEventListener("mouseup", this.clickEnd)
     );
   }
 
@@ -95,12 +97,12 @@ class App extends Component {
 }
 const StyledAppsWarpper = styled.div`
   box-sizing: border-box;
-  background-color: azure;
+  min-height: 400px;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-`; 
+`;
 
 const StyledDisplayWrapper = styled.div`
   border: 3px solid rgb(80, 83, 73);
@@ -126,6 +128,7 @@ const StyledDrumMachine = styled.div`
   background-color: blueviolet;
   border-radius: 25px;
   height: 60%;
+  min-height: 350px
   width: 70%
   display: flex;
   @media (max-width: 750px) {
