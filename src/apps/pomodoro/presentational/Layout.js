@@ -9,6 +9,7 @@ import ProgresContainer from "../container/Progres";
 const styleWrapper = {
   backgroundColor: "bisque",
   textAlign: "center",
+  minHeight: 500,
   height: "100vh",
   display: "flex",
   justifyContent: "center",
