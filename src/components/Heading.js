@@ -9,7 +9,7 @@ export const HomepageHeading = ({ mobile }) => (
   <Container id="home">
     <Grid>
       <Grid.Row>
-        <Grid.Column width={mobile ? null : 4} style={{ marginTop: "5em" }}>
+        <Grid.Column width={mobile ? null : 4} style={{ marginTop: "5em"}}>
           <Reveal animated="move">
             <Reveal.Content visible>
               <Image src={leninH} />

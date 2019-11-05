@@ -27,6 +27,7 @@ const StyledFrame = styled.div`
   background-color: blueviolet;
   border-radius: 10px;
   height: 80%;
+  max-height: 30em;
   min-width: 14em;
   width: 20%;
   display: flex;
