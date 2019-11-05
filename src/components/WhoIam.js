@@ -22,9 +22,10 @@ const WhoIam = () => (
             }}
           >
             I have passion for coding and open source. I am a fast hands-on
-            learner. You can find all my project code on github including this
-            portfolio website. Kindly follow me on github to stay up to date
-            with projects i work on.
+            learner. You can find all my project code on <a href="https://github.com/shefass">github</a> including this
+            portfolio <a href="https://github.com/shefass/portfolio" target="_blank" rel="noopener noreferrer">website</a>.
+            Kindly follow me on github to stay up to date
+            with projects I work on.
           </p>
           <Header as="h3" style={{ fontSize: "2em", textAlign: "center" }}>
             Goals
@@ -43,12 +44,17 @@ const WhoIam = () => (
             Skills
           </Header>
           <p style={{ fontSize: "1.33em" }}>
-            JS,React/Redux/Thunk (Intermediate level)
+          Front-end: JS,React/Redux/Thunk, React Native..
           </p>
           <p style={{ fontSize: "1.33em" }}>
-            React Native, Semantic UI (Beginner level)
+           Back-end: Node.js, Express, Git, Npm, SQL, MangoDb...
           </p>
-          <p style={{ fontSize: "1.33em" }}>Blockchain fundamentals</p>
+          <p style={{ fontSize: "1.33em" }}>Blockchain fundamentals, Agile philosophy, Cloud services (AWS, Alibaba...)</p>
+          <Header as="h3" style={{ fontSize: "2em", textAlign: "center" }}>
+            IT Experience
+          </Header>
+          <p style={{ fontSize: "1.33em" }}>Created <a href="https://github.com/blockplay-io" target="_blank" rel="noopener noreferrer">(front) </a>
+          and managing <a href="https://www.blockplay.io/" target="_blank" rel="noopener noreferrer">www.blockplay.io</a></p>
         </Grid.Column>
         <Grid.Column width={8} textAlign="center">
           <Calculator />

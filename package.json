@@ -2,7 +2,7 @@
   "name": "hompage_test",
   "version": "0.2.0",
   "private": true,
-  "homepage": "https://shefass.github.io/portfolio/",
+  "homepage": "http://shefass.github.io/portfolio/",
   "dependencies": {
     "axios": "^0.19.0",
     "react": "^16.8.2",

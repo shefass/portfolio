@@ -35,7 +35,7 @@ export const HomepageHeading = ({ mobile }) => (
             as="h2"
             content="My name is Algirdas Vaickelionis. I am dreamer and incurable
             optimist. 
-            I am familiar with JS, React, React Native...
+            I am familiar with front: JS, React, React Native... and back: Node.js, SQL...
             Please find the projects I have developed so far down below."
             inverted
             style={{
