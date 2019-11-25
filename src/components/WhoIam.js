@@ -55,6 +55,8 @@ const WhoIam = () => (
           </Header>
           <p style={{ fontSize: "1.33em" }}>Created <a href="https://github.com/blockplay-io" target="_blank" rel="noopener noreferrer">(front) </a>
           and managing <a href="https://www.blockplay.io/" target="_blank" rel="noopener noreferrer">www.blockplay.io</a></p>
+          <p style={{ fontSize: "1.33em" }}>Full Stack dockerized web app <a href="http://meme.vaickelionis.com/" target="_blank" rel="noopener noreferrer">Meme generator </a>
+          Source<a href="https://github.com/shefass/meme-generator" target="_blank" rel="noopener noreferrer"> here</a></p>
         </Grid.Column>
         <Grid.Column width={8} textAlign="center">
           <Calculator />
